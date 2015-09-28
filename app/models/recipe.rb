@@ -7,8 +7,8 @@ class Recipe
 	format :json		
 	
 	def self.for term		
-		get("", query: {query: term})["recipes"]	
-		#key_value = ENV['FOOD2FORK_KEY']
-		#get("http://food2fork.com/api/search?key=#{key_value}&q=#{term}")["recipes"]
+		#get("", query: {query: term})["recipes"]	
+		key_value = ENV['FOOD2FORK_KEY']
+		get("http://food2fork.com/api/search?key=#{key_value}&q=#{term}")["recipes"]
 	end
 end
